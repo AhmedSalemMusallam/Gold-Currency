@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		5BE1DF872954EB100010295B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE1DF862954EB100010295B /* AppDelegate.swift */; };
 		5BE1DF892954EB100010295B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE1DF882954EB100010295B /* SceneDelegate.swift */; };
-		5BE1DF8B2954EB100010295B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE1DF8A2954EB100010295B /* ViewController.swift */; };
 		5BE1DF8E2954EB100010295B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BE1DF8C2954EB100010295B /* Main.storyboard */; };
 		5BE1DF902954EB110010295B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BE1DF8F2954EB110010295B /* Assets.xcassets */; };
 		5BE1DF932954EB110010295B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BE1DF912954EB110010295B /* LaunchScreen.storyboard */; };
+		5BE1DFA22954ECC90010295B /* MainTabBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE1DFA12954ECC90010295B /* MainTabBarTableViewController.swift */; };
+		5BE1DFA42954ED6C0010295B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE1DFA32954ED6C0010295B /* MainViewController.swift */; };
+		5BE1DFA62954EDD20010295B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE1DFA52954EDD20010295B /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5BE1DF832954EB100010295B /* Gold-Currency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gold-Currency.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE1DF862954EB100010295B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BE1DF882954EB100010295B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5BE1DF8A2954EB100010295B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5BE1DF8D2954EB100010295B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5BE1DF8F2954EB110010295B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BE1DF922954EB110010295B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BE1DF942954EB110010295B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BE1DFA12954ECC90010295B /* MainTabBarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarTableViewController.swift; sourceTree = "<group>"; };
+		5BE1DFA32954ED6C0010295B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		5BE1DFA52954EDD20010295B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,57 @@
 		5BE1DF852954EB100010295B /* Gold-Currency */ = {
 			isa = PBXGroup;
 			children = (
+				5BE1DF9E2954EC560010295B /* Views */,
+				5BE1DF9D2954EC4A0010295B /* ViewModels */,
+				5BE1DF9C2954EC3D0010295B /* Resources */,
+				5BE1DF9B2954EC350010295B /* Models */,
+				5BE1DF9A2954EC2A0010295B /* Controllers */,
 				5BE1DF862954EB100010295B /* AppDelegate.swift */,
 				5BE1DF882954EB100010295B /* SceneDelegate.swift */,
-				5BE1DF8A2954EB100010295B /* ViewController.swift */,
 				5BE1DF8C2954EB100010295B /* Main.storyboard */,
 				5BE1DF8F2954EB110010295B /* Assets.xcassets */,
 				5BE1DF912954EB110010295B /* LaunchScreen.storyboard */,
 				5BE1DF942954EB110010295B /* Info.plist */,
 			);
 			path = "Gold-Currency";
+			sourceTree = "<group>";
+		};
+		5BE1DF9A2954EC2A0010295B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5BE1DFA32954ED6C0010295B /* MainViewController.swift */,
+				5BE1DFA12954ECC90010295B /* MainTabBarTableViewController.swift */,
+				5BE1DFA52954EDD20010295B /* SettingsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5BE1DF9B2954EC350010295B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5BE1DF9C2954EC3D0010295B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5BE1DF9D2954EC4A0010295B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		5BE1DF9E2954EC560010295B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +184,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BE1DF8B2954EB100010295B /* ViewController.swift in Sources */,
 				5BE1DF872954EB100010295B /* AppDelegate.swift in Sources */,
+				5BE1DFA22954ECC90010295B /* MainTabBarTableViewController.swift in Sources */,
 				5BE1DF892954EB100010295B /* SceneDelegate.swift in Sources */,
+				5BE1DFA62954EDD20010295B /* SettingsViewController.swift in Sources */,
+				5BE1DFA42954ED6C0010295B /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
