@@ -9,7 +9,7 @@ import Foundation
 
 
 struct Metal : Codable{
-    let timestamp: Int
+    let timestamp: Int?
     let metal: String?
     let currency: String?
     let exchange: String?
@@ -18,10 +18,18 @@ struct Metal : Codable{
     let ask: Double?
     let bid: Double?
     let price: Double?
+    let high_price: Double?
+    let low_price: Double?
     let ch: Double?
+    let chp: Double?
+    let prev_close_price: Double?
     let price_gram_24k: Double?
     let price_gram_22k: Double?
+    let price_gram_21k: Double?
     let price_gram_20k: Double?
     let price_gram_18k: Double?
 }
+
+
+
 

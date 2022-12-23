@@ -17,6 +17,7 @@
 		5BE1DFA62954EDD20010295B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE1DFA52954EDD20010295B /* SettingsViewController.swift */; };
 		5BE1DFAA2955288C0010295B /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE1DFA92955288C0010295B /* APICaller.swift */; };
 		5BE1DFAC29552B3A0010295B /* Metal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE1DFAB29552B3A0010295B /* Metal.swift */; };
+		5BE2E8CF2955F37700463779 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE2E8CE2955F37700463779 /* Extentions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		5BE1DFA52954EDD20010295B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		5BE1DFA92955288C0010295B /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		5BE1DFAB29552B3A0010295B /* Metal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metal.swift; sourceTree = "<group>"; };
+		5BE2E8CE2955F37700463779 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 		5BE1DF9C2954EC3D0010295B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5BE2E8CE2955F37700463779 /* Extentions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				5BE1DFAC29552B3A0010295B /* Metal.swift in Sources */,
 				5BE1DFA62954EDD20010295B /* SettingsViewController.swift in Sources */,
 				5BE1DFA42954ED6C0010295B /* MainViewController.swift in Sources */,
+				5BE2E8CF2955F37700463779 /* Extentions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

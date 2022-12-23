@@ -39,14 +39,14 @@ class APICaller
                 }
                 
                 do{
-                    let results =  try JSONSerialization.jsonObject(with: data, options: .fragmentsAllowed)
-//                    let results =  try JSONDecoder().decode(TrendingTitleResponse.self, from: data)
-//                    completion(.success(results.results))
+//                    let results =  try JSONSerialization.jsonObject(with: data, options: .fragmentsAllowed)
+                    let results =  try JSONDecoder().decode(Metal.self, from: data)
+                    completion(.success([results]))
                     print(results)
                 }catch{
-//                    completion(.failure(APIError.failedToGetData))
-                    print(error.localizedDescription)
-                    print("Error")
+                    completion(.failure(APIError.failedToGetData))
+//                    print(error.localizedDescription)
+//                    print("Error")
                 }
                 
                 
