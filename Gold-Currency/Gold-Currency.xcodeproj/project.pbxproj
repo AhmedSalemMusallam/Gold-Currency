@@ -15,6 +15,8 @@
 		5BE1DFA22954ECC90010295B /* MainTabBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE1DFA12954ECC90010295B /* MainTabBarTableViewController.swift */; };
 		5BE1DFA42954ED6C0010295B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE1DFA32954ED6C0010295B /* MainViewController.swift */; };
 		5BE1DFA62954EDD20010295B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE1DFA52954EDD20010295B /* SettingsViewController.swift */; };
+		5BE1DFAA2955288C0010295B /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE1DFA92955288C0010295B /* APICaller.swift */; };
+		5BE1DFAC29552B3A0010295B /* Metal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE1DFAB29552B3A0010295B /* Metal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		5BE1DFA12954ECC90010295B /* MainTabBarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarTableViewController.swift; sourceTree = "<group>"; };
 		5BE1DFA32954ED6C0010295B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5BE1DFA52954EDD20010295B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		5BE1DFA92955288C0010295B /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		5BE1DFAB29552B3A0010295B /* Metal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		5BE1DF852954EB100010295B /* Gold-Currency */ = {
 			isa = PBXGroup;
 			children = (
+				5BE1DFA8295528790010295B /* Managers */,
 				5BE1DF9E2954EC560010295B /* Views */,
 				5BE1DF9D2954EC4A0010295B /* ViewModels */,
 				5BE1DF9C2954EC3D0010295B /* Resources */,
@@ -78,9 +83,8 @@
 		5BE1DF9A2954EC2A0010295B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5BE1DFA32954ED6C0010295B /* MainViewController.swift */,
+				5BE1DFA729551D000010295B /* Core */,
 				5BE1DFA12954ECC90010295B /* MainTabBarTableViewController.swift */,
-				5BE1DFA52954EDD20010295B /* SettingsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -88,6 +92,7 @@
 		5BE1DF9B2954EC350010295B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5BE1DFAB29552B3A0010295B /* Metal.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -111,6 +116,23 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		5BE1DFA729551D000010295B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				5BE1DFA52954EDD20010295B /* SettingsViewController.swift */,
+				5BE1DFA32954ED6C0010295B /* MainViewController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		5BE1DFA8295528790010295B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				5BE1DFA92955288C0010295B /* APICaller.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,8 +207,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BE1DF872954EB100010295B /* AppDelegate.swift in Sources */,
+				5BE1DFAA2955288C0010295B /* APICaller.swift in Sources */,
 				5BE1DFA22954ECC90010295B /* MainTabBarTableViewController.swift in Sources */,
 				5BE1DF892954EB100010295B /* SceneDelegate.swift in Sources */,
+				5BE1DFAC29552B3A0010295B /* Metal.swift in Sources */,
 				5BE1DFA62954EDD20010295B /* SettingsViewController.swift in Sources */,
 				5BE1DFA42954ED6C0010295B /* MainViewController.swift in Sources */,
 			);
