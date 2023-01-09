@@ -123,7 +123,7 @@ class MainViewController: UIViewController {
     
         view.backgroundColor = .systemBackground
         
-        title = "Gold Prices"
+//        title = "Gold Prices"
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationItem.largeTitleDisplayMode = .always
         
