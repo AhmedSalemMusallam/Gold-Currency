@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ozi-MI-Ndm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Nf9-ft-DF4">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
@@ -95,10 +95,52 @@
             </objects>
             <point key="canvasLocation" x="958" y="-34"/>
         </scene>
+        <!--Splash View Controller-->
+        <scene sceneID="fFN-oQ-vRV">
+            <objects>
+                <viewController id="Nf9-ft-DF4" customClass="SplashViewController" customModule="Gold_Currency" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TGm-7g-ef4">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monitoring Gold " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqs-Hk-WPQ">
+                                <rect key="frame" x="75" y="412" width="240" height="40"/>
+                                <fontDescription key="fontDescription" name="RobotoSlab-SemiBold" family="Roboto Slab" pointSize="30"/>
+                                <color key="textColor" name="LightColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="TSK-LR-8xa">
+                                <rect key="frame" x="75" y="176" width="240" height="198"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="198" id="F4E-GO-u4L"/>
+                                    <constraint firstAttribute="width" constant="240" id="nY0-RP-ySp"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="69O-2X-4j7"/>
+                        <color key="backgroundColor" name="DarkColor"/>
+                        <constraints>
+                            <constraint firstItem="TSK-LR-8xa" firstAttribute="centerX" secondItem="69O-2X-4j7" secondAttribute="centerX" id="gRs-Lj-OIr"/>
+                            <constraint firstItem="TSK-LR-8xa" firstAttribute="top" secondItem="69O-2X-4j7" secondAttribute="top" constant="129" id="lqE-SW-w0W"/>
+                            <constraint firstItem="vqs-Hk-WPQ" firstAttribute="centerX" secondItem="TSK-LR-8xa" secondAttribute="centerX" id="r3n-SC-X9d"/>
+                            <constraint firstItem="vqs-Hk-WPQ" firstAttribute="top" secondItem="TSK-LR-8xa" secondAttribute="bottom" constant="38" id="vfB-Bd-8XF"/>
+                            <constraint firstItem="vqs-Hk-WPQ" firstAttribute="trailing" secondItem="TSK-LR-8xa" secondAttribute="trailing" id="zcq-R8-YM5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="appName" destination="vqs-Hk-WPQ" id="a42-va-Oyh"/>
+                        <outlet property="logoImage" destination="TSK-LR-8xa" id="MrT-PV-dkj"/>
+                        <segue destination="ozi-MI-Ndm" kind="show" identifier="PerformsSplashSegue" id="i96-yB-ZEl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vWq-oC-BLU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-792.30769230769226" y="-34.123222748815166"/>
+        </scene>
         <!--On Boarding View Controller-->
         <scene sceneID="6ML-UE-4YM">
             <objects>
-                <viewController storyboardIdentifier="OnBoardingViewController" id="ozi-MI-Ndm" customClass="OnBoardingViewController" customModule="OnBoardingScreen" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OnBoardingViewController" modalPresentationStyle="fullScreen" id="ozi-MI-Ndm" customClass="OnBoardingViewController" customModule="Gold_Currency" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="iXz-8l-Si2">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -142,7 +184,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OnBoardingCell" id="Sgw-8j-bjG" customClass="OnBoardingCell" customModule="OnBoardingScreen" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OnBoardingCell" id="Sgw-8j-bjG" customClass="OnBoardingCell" customModule="Gold_Currency" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="-38.666666666666664" width="350" height="565"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="uU8-3c-cYL">
@@ -219,6 +261,7 @@
                             <constraint firstItem="UON-Hj-Dol" firstAttribute="top" secondItem="w5v-nj-EUj" secondAttribute="top" constant="20" id="zPX-Io-Xls"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="tLW-Uo-9si"/>
                     <connections>
                         <outlet property="BoardingCollectionView" destination="KES-te-OsG" id="ZEV-0j-tpl"/>
                         <outlet property="pageControl" destination="TA3-BC-fLh" id="whA-sN-kHZ"/>
@@ -233,6 +276,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Logo" width="512" height="512"/>
         <image name="arrowshape.right.fill" catalog="system" width="128" height="104"/>
         <image name="exchange" width="24" height="24"/>
         <image name="goldicon" width="24" height="24"/>
@@ -240,10 +284,13 @@
         <image name="image_gold_bar" width="512" height="512"/>
         <image name="settings" width="24" height="24"/>
         <namedColor name="DarkColor">
-            <color red="0.22745098039215686" green="0.20784313725490194" blue="0.20784313725490194" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.22699999809265137" green="0.20800000429153442" blue="0.20800000429153442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LightColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="PrimaryColor">
-            <color red="1" green="0.73725490196078436" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.7369999885559082" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
