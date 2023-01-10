@@ -112,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				5BCE7925296CA5BB002CD48F /* SplashViewController.swift */,
+				5B0E1256296C2CE700C9EF14 /* OnBoardingViewController.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -191,7 +192,6 @@
 				5BE1DFA52954EDD20010295B /* SettingsViewController.swift */,
 				5BE1DFA32954ED6C0010295B /* MainViewController.swift */,
 				5B0E1254296C1EB600C9EF14 /* ExchangeViewController.swift */,
-				5B0E1256296C2CE700C9EF14 /* OnBoardingViewController.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";

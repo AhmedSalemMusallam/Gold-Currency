@@ -6,11 +6,12 @@
 //
 
 import Foundation
+
 struct Constants{
     static let API_KEY = "goldapi-13wxdztlbf34ozi-io"
     static let baseURL = "https://www.goldapi.io/api"
-    static let Metal = ["XAU","XAG","XPT","XPD"]
-    static let Currency = ["USD","SAR"]
+    static var metalKey = ""
+    static var currencyKey = ""
 }
 
 
@@ -26,7 +27,7 @@ class APICaller
     
     func getPrices(completion: @escaping (Result<[Metal],Error>) -> Void)
         {
-            guard let url = URL(string: "\(Constants.baseURL)/\(Constants.Metal[0])/\(Constants.Currency[0])") else { return }
+            guard let url = URL(string: "\(Constants.baseURL)/\(Constants.metalKey)/\(Constants.currencyKey)") else { return }
             
             print(url)
             var request = URLRequest(url: url)
