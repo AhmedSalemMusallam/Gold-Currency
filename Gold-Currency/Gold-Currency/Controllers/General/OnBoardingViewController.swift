@@ -50,9 +50,25 @@ class OnBoardingViewController: UIViewController {
 
 // MARK: - View Life Cycle
 extension OnBoardingViewController {
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        //Mark:- Setting Application Mode
+        if SceneDelegate.userData.bool(forKey: "LightMode")
+        {
+            view.overrideUserInterfaceStyle = .light
+        }else{
+            view.overrideUserInterfaceStyle = .dark
+        }
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+       
+        
         //Adding Some Custom Styles
         signUpButton.layer.cornerRadius = 30
         signUpButton.layer.borderWidth = 1

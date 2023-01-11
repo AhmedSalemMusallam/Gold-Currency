@@ -8,15 +8,28 @@
 import UIKit
 
 class SplashViewController: UIViewController {
-
+    
+        
     @IBOutlet weak var logoImage: UIImageView!
     
     @IBOutlet weak var appName: UILabel!
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        //Mark:- Setting Application Mode
+        if SceneDelegate.userData.bool(forKey: "LightMode")
+        {
+            view.overrideUserInterfaceStyle = .light
+        }else{
+            view.overrideUserInterfaceStyle = .dark
+        }
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
+       
         // Fire Segue to OnBoarding Screen
         PerformsSplashSegue()
         //Aniamte Logo and App Name

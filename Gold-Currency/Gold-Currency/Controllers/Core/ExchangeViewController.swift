@@ -9,10 +9,22 @@ import UIKit
 
 class ExchangeViewController: UIViewController {
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        //Mark:- Setting Application Mode
+        if SceneDelegate.userData.bool(forKey: "LightMode")
+        {
+            view.overrideUserInterfaceStyle = .light
+        }else{
+            view.overrideUserInterfaceStyle = .dark
+        }
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
     
 

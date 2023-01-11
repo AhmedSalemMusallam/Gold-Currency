@@ -147,12 +147,31 @@ class MainViewController: UIViewController {
 
     private var metals:[Metal]?
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        //Mark:- Setting Application Mode
+        if SceneDelegate.userData.bool(forKey: "LightMode")
+        {
+            view.overrideUserInterfaceStyle = .light
+        }else{
+            view.overrideUserInterfaceStyle = .dark
+        }
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
         view.backgroundColor = .systemBackground
         
-        
+        //Mark:- Setting Application Mode
+        if SceneDelegate.userData.bool(forKey: "LightMode")
+        {
+            view.overrideUserInterfaceStyle = .light
+        }else{
+            view.overrideUserInterfaceStyle = .dark
+        }
         // Mark:- seeting icons for text fields
         metalTypeSettingTV.layer.borderWidth = 2
         metalTypeSettingTV.layer.cornerRadius = 5
