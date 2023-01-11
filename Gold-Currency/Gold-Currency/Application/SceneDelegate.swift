@@ -10,6 +10,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     public static var userData = UserDefaults.standard
+    
     var window: UIWindow?
     
 
@@ -18,8 +19,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         
+        
+        
         //Mark:- Application Mode
-//        SceneDelegate.userData.set(true, forKey: "LightMode")
         if SceneDelegate.userData.bool(forKey: "LightMode") == true
         {
             window?.overrideUserInterfaceStyle = .light

@@ -27,6 +27,31 @@ class SettingsViewController: UIViewController {
         
     }
     
+    //Mark:- Override Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier
+        {
+        case "LanguageSettings":
+            let destinationVC = segue.destination as? SettingDetailViewController
+            destinationVC?.segueIdentifier = "LanguageSettings"
+            destinationVC?.titleForBackButton = "  Language"
+            destinationVC?.settingUITV = "Select Language"
+        case "MetalSettings":
+            let destinationVC = segue.destination as? SettingDetailViewController
+            destinationVC?.segueIdentifier = "MetalSettings"
+            destinationVC?.titleForBackButton = "  Metal Type"
+            destinationVC?.settingUITV = "Select Metal Type"
+        case "CurrencySettings":
+            let destinationVC = segue.destination as? SettingDetailViewController
+            destinationVC?.segueIdentifier = "CurrencySettings"
+            destinationVC?.titleForBackButton = "  Currency"
+            destinationVC?.settingUITV = "Select Currency"
+        default:
+            print("Error Happend")
+        }
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -62,6 +87,7 @@ extension SettingsViewController :UITableViewDelegate, UITableViewDataSource
         switch indexPath.row
         {
         case 0:
+            
             cell.imageView?.image = UIImage(systemName: "moon")
             //here is programatically switch make to the table view
             let switchView = UISwitch(frame: .zero)
@@ -73,11 +99,10 @@ extension SettingsViewController :UITableViewDelegate, UITableViewDataSource
             }else{
                 switchView.setOn(true, animated: true)
             }
-            
-            
             switchView.tag = indexPath.row // for detect which row switch Changed
             switchView.addTarget(self, action: #selector(openView), for: .valueChanged)
             cell.accessoryView = switchView
+            
         case 1:
             cell.imageView?.image = UIImage(systemName: "globe")
         case 2:
@@ -96,16 +121,29 @@ extension SettingsViewController :UITableViewDelegate, UITableViewDataSource
         }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
+        switch indexPath.row {
+        case 0 :
+            print("Dark Mode")
+        case 1:
+            print("Language")
+            performSegue(withIdentifier: "LanguageSettings", sender: nil)
+        case 2:
+            print("Metal Type")
+            performSegue(withIdentifier: "MetalSettings", sender: nil)
+        case 3:
+            print("Currency Type")
+            performSegue(withIdentifier: "CurrencySettings", sender: nil)
+        default:
+            print("Do Nothing.")
+        }
     }
     
+    //Mark:- Perform Switch operation
     @objc public func openView(sender: UISwitch){
         if(sender.isOn) {
-            print("ON")
             SceneDelegate.userData.set(false, forKey: "LightMode")
             view.overrideUserInterfaceStyle = .dark
         }else{
-            print("OFF")
             SceneDelegate.userData.set(true, forKey: "LightMode")
             view.overrideUserInterfaceStyle = .light
         }

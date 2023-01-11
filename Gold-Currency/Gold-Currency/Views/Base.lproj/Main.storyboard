@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Nf9-ft-DF4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ype-4k-Pog">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
@@ -75,11 +75,76 @@
                     </tabBarItem>
                     <connections>
                         <outlet property="settingTableView" destination="TOX-S1-C4N" id="SlQ-B7-CcC"/>
+                        <segue destination="Bvi-dg-wHv" kind="show" identifier="LanguageSettings" id="HR6-dl-zOE"/>
+                        <segue destination="Bvi-dg-wHv" kind="show" identifier="MetalSettings" id="aVq-Q8-AE9"/>
+                        <segue destination="Bvi-dg-wHv" kind="show" identifier="CurrencySettings" id="hac-iB-kc8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5w-lR-5Gp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3405" y="-336"/>
+        </scene>
+        <!--Setting Detail View Controller-->
+        <scene sceneID="I7M-Zw-gAy">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Bvi-dg-wHv" customClass="SettingDetailViewController" customModule="Gold_Currency" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Od-8l-eYb">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fg-pS-QPa">
+                                <rect key="frame" x="30.000000000000007" y="97" width="111.66666666666669" height="27"/>
+                                <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="20"/>
+                                <color key="tintColor" name="DarkColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title=" Language" image="chevron.backward" catalog="system">
+                                    <color key="titleColor" name="DarkColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionGoBack:" destination="Bvi-dg-wHv" eventType="touchUpInside" id="6tj-vf-Jmo"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Select Language" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qkl-u9-SD7">
+                                <rect key="frame" x="30" y="174" width="330" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="mfV-6Q-2iP"/>
+                                </constraints>
+                                <color key="textColor" name="DarkColor"/>
+                                <fontDescription key="fontDescription" name="RobotoSlab-SemiBold" family="Roboto Slab" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u04-f2-SW5">
+                                <rect key="frame" x="100" y="244" width="190" height="36"/>
+                                <color key="backgroundColor" name="DarkColor"/>
+                                <fontDescription key="fontDescription" name="RobotoSlab-SemiBold" family="Roboto Slab" pointSize="18"/>
+                                <color key="tintColor" name="LightColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Save Settings"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jKQ-2L-NZy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="u04-f2-SW5" firstAttribute="leading" secondItem="jKQ-2L-NZy" secondAttribute="leading" constant="100" id="5z3-bt-Gfq"/>
+                            <constraint firstItem="6fg-pS-QPa" firstAttribute="top" secondItem="jKQ-2L-NZy" secondAttribute="top" constant="50" id="HrY-KF-fA5"/>
+                            <constraint firstItem="6fg-pS-QPa" firstAttribute="leading" secondItem="jKQ-2L-NZy" secondAttribute="leading" constant="30" id="Nfh-mb-Toe"/>
+                            <constraint firstItem="jKQ-2L-NZy" firstAttribute="trailing" secondItem="u04-f2-SW5" secondAttribute="trailing" constant="100" id="OOI-0E-5q7"/>
+                            <constraint firstItem="jKQ-2L-NZy" firstAttribute="trailing" secondItem="Qkl-u9-SD7" secondAttribute="trailing" constant="30" id="dYe-UJ-YRG"/>
+                            <constraint firstItem="u04-f2-SW5" firstAttribute="top" secondItem="Qkl-u9-SD7" secondAttribute="bottom" constant="30" id="kyH-Cr-eaT"/>
+                            <constraint firstItem="Qkl-u9-SD7" firstAttribute="leading" secondItem="jKQ-2L-NZy" secondAttribute="leading" constant="30" id="lRt-jS-oax"/>
+                            <constraint firstItem="Qkl-u9-SD7" firstAttribute="top" secondItem="6fg-pS-QPa" secondAttribute="bottom" constant="50" id="vUq-R2-Oqy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="2ZQ-d5-JBn"/>
+                    <connections>
+                        <outlet property="backButton" destination="6fg-pS-QPa" id="Irx-GS-XKi"/>
+                        <outlet property="saveSetting" destination="u04-f2-SW5" id="xWf-NQ-qfB"/>
+                        <outlet property="settingSelectionUITextField" destination="Qkl-u9-SD7" id="Vty-g3-CeJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T6z-P0-bMA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4231" y="-336"/>
         </scene>
         <!--Metal Prices-->
         <scene sceneID="WlK-DT-2Q8">
@@ -99,17 +164,23 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Select Metal" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jd0-KT-tdD">
-                                        <rect key="frame" x="20" y="103" width="350" height="34"/>
-                                        <fontDescription key="fontDescription" name="RobotoSlab-SemiBold" family="Roboto Slab" pointSize="14"/>
+                                        <rect key="frame" x="20" y="103" width="350" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="aXp-v2-Tun"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="RobotoSlab-SemiBold" family="Roboto Slab" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Select Currency" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X5a-hc-Fip">
-                                        <rect key="frame" x="20" y="157" width="350" height="34"/>
-                                        <fontDescription key="fontDescription" name="RobotoSlab-SemiBold" family="Roboto Slab" pointSize="14"/>
+                                        <rect key="frame" x="20" y="163" width="350" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="0td-PK-73J"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="RobotoSlab-SemiBold" family="Roboto Slab" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lci-RC-VfP">
-                                        <rect key="frame" x="20" y="293" width="350" height="30"/>
+                                        <rect key="frame" x="20" y="309" width="350" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="z5f-Zi-M9M"/>
                                         </constraints>
@@ -118,7 +189,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22K Gram Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eL1-lf-P8k">
-                                        <rect key="frame" x="20" y="343" width="350" height="30"/>
+                                        <rect key="frame" x="20" y="359" width="350" height="30"/>
                                         <color key="backgroundColor" name="DarkColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Ybi-sI-c3o"/>
@@ -128,14 +199,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20K Gram Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQf-Rn-6NU">
-                                        <rect key="frame" x="20" y="499" width="350" height="22.666666666666629"/>
+                                        <rect key="frame" x="20" y="515" width="350" height="22.666666666666629"/>
                                         <color key="backgroundColor" name="DarkColor"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-SemiBold" family="Roboto Slab" pointSize="17"/>
                                         <color key="textColor" name="LightColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDp-Aa-HA8">
-                                        <rect key="frame" x="20" y="519.66666666666663" width="350" height="30"/>
+                                        <rect key="frame" x="20" y="535.66666666666663" width="350" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="ghX-Xv-0or"/>
                                         </constraints>
@@ -144,7 +215,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18K Gram Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6GO-YY-7tL">
-                                        <rect key="frame" x="20" y="569.66666666666663" width="350" height="30"/>
+                                        <rect key="frame" x="20" y="585.66666666666663" width="350" height="30"/>
                                         <color key="backgroundColor" name="DarkColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="SCr-FV-wce"/>
@@ -154,7 +225,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2e-PI-a33">
-                                        <rect key="frame" x="20" y="597.66666666666663" width="350" height="30"/>
+                                        <rect key="frame" x="20" y="613.66666666666663" width="350" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="xwp-Z7-3HS"/>
                                         </constraints>
@@ -163,7 +234,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iYV-aH-5jS">
-                                        <rect key="frame" x="20" y="371" width="350" height="30"/>
+                                        <rect key="frame" x="20" y="387" width="350" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="tJO-10-KGv"/>
                                         </constraints>
@@ -172,7 +243,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21K Gram Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wJ-jY-vW1">
-                                        <rect key="frame" x="20" y="421" width="350" height="30"/>
+                                        <rect key="frame" x="20" y="437" width="350" height="30"/>
                                         <color key="backgroundColor" name="DarkColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Xl0-gh-BaM"/>
@@ -182,7 +253,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0VH-u0-PRC">
-                                        <rect key="frame" x="20" y="449" width="350" height="30"/>
+                                        <rect key="frame" x="20" y="465" width="350" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="aWo-2A-aLH"/>
                                         </constraints>
@@ -191,21 +262,21 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="oZW-fO-6ye">
-                                        <rect key="frame" x="65" y="293" width="260" height="260"/>
+                                        <rect key="frame" x="65" y="309" width="260" height="260"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="260" id="YQ7-rh-m8X"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Metal Type And Currency " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3F4-J5-eXl">
-                                        <rect key="frame" x="49" y="573" width="292" height="23.333333333333371"/>
+                                        <rect key="frame" x="49" y="589" width="292" height="23.333333333333371"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-SemiBold" family="Roboto Slab" pointSize="18"/>
                                         <color key="textColor" name="PrimaryColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLx-tr-dlc">
-                                        <rect key="frame" x="50" y="211" width="290" height="32"/>
+                                        <rect key="frame" x="50" y="223" width="290" height="36"/>
                                         <color key="backgroundColor" name="DarkColor"/>
-                                        <fontDescription key="fontDescription" name="RobotoSlab-SemiBold" family="Roboto Slab" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="RobotoSlab-SemiBold" family="Roboto Slab" pointSize="18"/>
                                         <color key="tintColor" name="LightColor"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Show Prices"/>
@@ -214,7 +285,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24K Gram Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRW-ah-kB1">
-                                        <rect key="frame" x="20" y="265" width="350" height="30"/>
+                                        <rect key="frame" x="20" y="281" width="350" height="30"/>
                                         <color key="backgroundColor" name="DarkColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="63l-3v-Xia"/>
@@ -515,9 +586,13 @@
             <point key="canvasLocation" x="72" y="-34"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="hac-iB-kc8"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo" width="512" height="512"/>
         <image name="arrowshape.right.fill" catalog="system" width="128" height="104"/>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="exchange" width="24" height="24"/>
         <image name="goldicon" width="24" height="24"/>
         <image name="image_1" width="512" height="512"/>

@@ -22,6 +22,8 @@
 		5B0E1270296C30E300C9EF14 /* RobotoSlab-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B0E1267296C30E300C9EF14 /* RobotoSlab-Black.ttf */; };
 		5B0E1271296C30E300C9EF14 /* RobotoSlab-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B0E1268296C30E300C9EF14 /* RobotoSlab-Medium.ttf */; };
 		5BCE7926296CA5BB002CD48F /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCE7925296CA5BB002CD48F /* SplashViewController.swift */; };
+		5BD4C86C296F56A20064DDDA /* SettingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4C86B296F56A20064DDDA /* SettingDetailViewController.swift */; };
+		5BD4C86E296F75580064DDDA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4C86D296F75580064DDDA /* Constants.swift */; };
 		5BE1DF872954EB100010295B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE1DF862954EB100010295B /* AppDelegate.swift */; };
 		5BE1DF892954EB100010295B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE1DF882954EB100010295B /* SceneDelegate.swift */; };
 		5BE1DF8E2954EB100010295B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BE1DF8C2954EB100010295B /* Main.storyboard */; };
@@ -50,6 +52,8 @@
 		5B0E1267296C30E300C9EF14 /* RobotoSlab-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Black.ttf"; sourceTree = "<group>"; };
 		5B0E1268296C30E300C9EF14 /* RobotoSlab-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Medium.ttf"; sourceTree = "<group>"; };
 		5BCE7925296CA5BB002CD48F /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		5BD4C86B296F56A20064DDDA /* SettingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingDetailViewController.swift; sourceTree = "<group>"; };
+		5BD4C86D296F75580064DDDA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5BE1DF832954EB100010295B /* Gold-Currency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gold-Currency.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE1DF862954EB100010295B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BE1DF882954EB100010295B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +121,15 @@
 			path = General;
 			sourceTree = "<group>";
 		};
+		5BD4C86A296F565B0064DDDA /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				5BE1DFA52954EDD20010295B /* SettingsViewController.swift */,
+				5BD4C86B296F56A20064DDDA /* SettingDetailViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		5BE1DF7A2954EB100010295B = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +186,7 @@
 				5BE2E8CE2955F37700463779 /* Extentions.swift */,
 				5BE1DF8F2954EB110010295B /* Assets.xcassets */,
 				5B0E125D296C304B00C9EF14 /* Colors.swift */,
+				5BD4C86D296F75580064DDDA /* Constants.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -189,7 +203,7 @@
 		5BE1DFA729551D000010295B /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				5BE1DFA52954EDD20010295B /* SettingsViewController.swift */,
+				5BD4C86A296F565B0064DDDA /* Settings */,
 				5BE1DFA32954ED6C0010295B /* MainViewController.swift */,
 				5B0E1254296C1EB600C9EF14 /* ExchangeViewController.swift */,
 			);
@@ -286,8 +300,10 @@
 			files = (
 				5B0E1259296C2E1800C9EF14 /* OnBoardingCell.swift in Sources */,
 				5B0E125E296C304B00C9EF14 /* Colors.swift in Sources */,
+				5BD4C86C296F56A20064DDDA /* SettingDetailViewController.swift in Sources */,
 				5BE1DF872954EB100010295B /* AppDelegate.swift in Sources */,
 				5B0E1255296C1EB600C9EF14 /* ExchangeViewController.swift in Sources */,
+				5BD4C86E296F75580064DDDA /* Constants.swift in Sources */,
 				5BE1DFAA2955288C0010295B /* APICaller.swift in Sources */,
 				5BE1DF892954EB100010295B /* SceneDelegate.swift in Sources */,
 				5BCE7926296CA5BB002CD48F /* SplashViewController.swift in Sources */,
