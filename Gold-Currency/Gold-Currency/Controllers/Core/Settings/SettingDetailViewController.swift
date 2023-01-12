@@ -23,10 +23,14 @@ class SettingDetailViewController: UIViewController {
     @IBOutlet weak var saveSetting: UIButton!
     
     //Mark:- Actions
+    //Mark:- Go Back Action
     @IBAction func actionGoBack(_ sender: Any) {
         dismiss(animated: true)
     }
-    
+    //Mark:- save user settings
+    @IBAction func saveSettings(_ sender: Any) {
+        showSettingsActionSheet()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,9 +96,45 @@ class SettingDetailViewController: UIViewController {
         }else{
             print("There's no values in the dictionary.")
         }
+    }
+    //Mark:- show action sheet for the user to confirm or no the saving process
+    private func showSettingsActionSheet()
+        {
+            let alert = UIAlertController(title: NSLocalizedString("Save Seetings", comment: "action title"), message: NSLocalizedString("Do You Want To Save ?", comment: "action message"), preferredStyle: .actionSheet)
+            
+            alert.addAction(UIAlertAction(title: NSLocalizedString("Yes", comment: "action yes"), style: .default , handler:{ (UIAlertAction)in
+                //Mark:- to save settings for lang, metal and currency
+                self.saveSettings()
+                
+            }))
+            
+            alert.addAction(UIAlertAction(title: NSLocalizedString("No", comment: "action no"), style: .destructive , handler:{ (UIAlertAction)in
+                print("Do no thing.")
+            }))
+            
+            
+            self.present(alert, animated: true, completion: {
+                print("completion block")
+            })
+        }
+    
+    //Mark:- the saving action to the user defaults
+    private func saveSettings()
+    {
+        guard let segueIdentifier = segueIdentifier else { return }
         
-        
-        
+        if segueIdentifier == "LanguageSettings"
+        {
+            SceneDelegate.userData.set(settingSelectionUITextField.text, forKey: "LanguageSettings")
+        }else if segueIdentifier == "MetalSettings"
+        {
+            SceneDelegate.userData.set(settingSelectionUITextField.text, forKey: "MetalSettings")
+        }else if segueIdentifier == "CurrencySettings"
+        {
+            SceneDelegate.userData.set(settingSelectionUITextField.text, forKey: "CurrencySettings")
+        }else{
+            print("There's no values in the dictionary.")
+        }
     }
     
 

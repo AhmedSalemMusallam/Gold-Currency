@@ -17,6 +17,10 @@ class MainViewController: UIViewController {
     var currencyList: [String] = []
     var currencyKeysList: [String] = []
     
+    // Mark:- User Default variables
+    var defaultMetalType : String?
+    var defaultCurrency : String?
+    
     //Mark:- Validation Flag
     var ValidationFlag : Bool = false
     
@@ -122,6 +126,9 @@ class MainViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        //Mark:- Setting the Default value for Metal And Currency
+        setDefaultMetalAndCurrencyValuesIfExists()
+        
         //Mark:- Setting Application Mode
         if SceneDelegate.userData.bool(forKey: "LightMode")
         {
@@ -132,10 +139,14 @@ class MainViewController: UIViewController {
         
     }
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
         view.backgroundColor = .systemBackground
+        
+        
         
         //Mark:- Setting Application Mode
         if SceneDelegate.userData.bool(forKey: "LightMode")
@@ -257,6 +268,21 @@ class MainViewController: UIViewController {
         {
             currencyKeysList.append(index)
             currencyList.append(value)
+        }
+    }
+    
+    private func setDefaultMetalAndCurrencyValuesIfExists()
+    {
+        guard let defaultMetalType = SceneDelegate.userData.string(forKey: "MetalSettings") else { return }
+        if !defaultMetalType.isEmpty
+        {
+            metalTypeSettingTV.text = defaultMetalType
+        }
+        guard let defaultCurrency = SceneDelegate.userData.string(forKey: "CurrencySettings") else { return }
+        
+        if !defaultCurrency.isEmpty
+        {
+            currencyTypeSettingTV.text = defaultCurrency
         }
     }
     
