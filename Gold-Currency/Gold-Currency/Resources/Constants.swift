@@ -42,3 +42,37 @@ let languages = [
     "EN":"English",
     "AR":"Arabic"
 ]
+
+let ExchangeCurrencyDictionary = [
+    "EUR" : "Euro",
+    "USD" : "United States Dollar",
+    "JPY" : "Japanese Yen",
+    "BGN" : "Bulgarian Lev",
+    "CZK" : "Czech Koruna",
+    "DKK" : "Danish Krone",
+    "GBP" : "Pound sterling",
+    "HUF" : "Hungarian Forint",
+    "PLN" : "Polish Zloty",
+    "RON" : "Romanian Leu",
+    "SEK" : "Swedish Krona",
+    "CHF" : "Swiss Franc",
+    "ISK" : "Icelandic Króna",
+    "NOK" : "Norwegian Krone",
+    "TRY" : "Turkish lira",
+    "AUD" : "Australian Dollar",
+    "BRL" : "Brazilian Real",
+    "CAD" : "Canadian Dollar",
+    "CNY" : "Chinese Yuan",
+    "HKD" : "Hong Kong Dollar",
+    "IDR" : "Indonesian Rupiah",
+    "INR" : "Indian Rupee",
+    "KRW" : "South Korean won",
+    "MXN" : "Mexican Peso",
+    "MYR" : "Malaysian Ringgit",
+    "NZD" : "New Zealand Dollar",
+    "PHP" : "Philippine peso",
+    "SGD" : "Singapore Dollar",
+    "THB" : "Thai Baht",
+    "ZAR" : "South African Rand"
+]
+
