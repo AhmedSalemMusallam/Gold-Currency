@@ -17,9 +17,9 @@ struct Constants{
     //Currency Exchange API
     static let currencyAPI_KEY = "od41osnug08ahufgegp8nen9e7hecj869n9g3qvvgnebdq7tek18"
     
-    //currencu Rates
+    //currency Rates
     static let currencyRatesbaseURL = "https://anyapi.io/api/v1/exchange/rates?"
-    static var baseCurrency = "USD"
+    static var baseCurrency = ""
     
     //Exchange Currency
     static let exchangeCurrencybaseURL = "https://anyapi.io/api/v1/exchange/convert?"
@@ -56,16 +56,13 @@ class APICaller
             }
             
             do{
-//                    let results =  try JSONSerialization.jsonObject(with: data, options: .fragmentsAllowed)
+
                 let results =  try JSONDecoder().decode(ExchangeCurrency.self, from: data)
                 completion(.success([results]))
-//                print(results)
-//                print("Success")
+
             }catch{
                 completion(.failure(APIError.failedToGetData))
-//                print("Failure")
-//                    print(error.localizedDescription)
-//                    print("Error")
+
             }
             
             
@@ -92,16 +89,12 @@ class APICaller
             }
             
             do{
-                    let results =  try JSONSerialization.jsonObject(with: data, options: .fragmentsAllowed)
-//                let results =  try JSONDecoder().decode([CurrencyRates].self, from: data)
-//                completion(.success(results))
-                print(results)
-                print("Success")
+//                    let results =  try JSONSerialization.jsonObject(with: data, options: .fragmentsAllowed)
+                let results =  try JSONDecoder().decode(CurrencyRates.self, from: data)
+                completion(.success([results]))
+               
             }catch{
                 completion(.failure(APIError.failedToGetData))
-                print("Failure")
-//                    print(error.localizedDescription)
-//                    print("Error")
             }
             
             

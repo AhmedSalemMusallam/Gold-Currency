@@ -76,3 +76,16 @@ let ExchangeCurrencyDictionary = [
     "ZAR" : "South African Rand"
 ]
 
+
+public func getDateFromTimeStamp(timeStamp : Double) -> String {
+
+        let date = NSDate(timeIntervalSince1970: timeStamp / 1000)
+        
+        let dayTimePeriodFormatter = DateFormatter()
+        dayTimePeriodFormatter.dateFormat = "dd MMM YY, hh:mm a"
+     // UnComment below to get only time
+    //  dayTimePeriodFormatter.dateFormat = "hh:mm a"
+
+        let dateString = dayTimePeriodFormatter.string(from: date as Date)
+        return dateString
+    }

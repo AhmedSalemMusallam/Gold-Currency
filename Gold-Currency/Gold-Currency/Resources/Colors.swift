@@ -9,4 +9,4 @@ import Foundation
 import UIKit
 let DarkColor = UIColor(named: "DarkColor")
 let PrimaryColor = UIColor(named: "PrimaryColor")
-let SecondaryColor = UIColor(named: "SecondaryColor")
+let LightColor = UIColor(named: "LightColor")

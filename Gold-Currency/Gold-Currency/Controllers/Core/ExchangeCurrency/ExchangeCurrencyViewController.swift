@@ -138,9 +138,7 @@ class ExchangeCurrencyViewController: UIViewController {
         
         //Mark:- initializiing lists
         initializeMetalAndCurrencyLists()
-//        APICaller.shared.getExchangeCurrency{[weak self] results in
-//
-//        }
+
        
     }
     
@@ -154,19 +152,8 @@ class ExchangeCurrencyViewController: UIViewController {
         }
     }
     
-    func getDateFromTimeStamp(timeStamp : Double) -> String {
-
-            let date = NSDate(timeIntervalSince1970: timeStamp / 1000)
-            
-            let dayTimePeriodFormatter = DateFormatter()
-            dayTimePeriodFormatter.dateFormat = "dd MMM YY, hh:mm a"
-         // UnComment below to get only time
-        //  dayTimePeriodFormatter.dateFormat = "hh:mm a"
-
-            let dateString = dayTimePeriodFormatter.string(from: date as Date)
-            return dateString
-        }
     
+    //MArk:- Fetch Exchange Prices
     private func fetchExchangePrices()
     {
         APICaller.shared.getExchangeCurrency{[weak self] results in
@@ -176,7 +163,7 @@ class ExchangeCurrencyViewController: UIViewController {
                 self?.exchangeCurrency = exchangeCurrency
                 DispatchQueue.main.async {
                     self?.ConvertedAmountValue.text = String(self?.exchangeCurrency?[0].converted ?? 0.0)
-                    self?.LastUpdateValue.text = self?.getDateFromTimeStamp(timeStamp: Double(self?.exchangeCurrency?[0].lastUpdate ?? 0.0))
+                    self?.LastUpdateValue.text = getDateFromTimeStamp(timeStamp: Double(self?.exchangeCurrency?[0].lastUpdate ?? 0.0))
                     
                 }
             case .failure(let error):

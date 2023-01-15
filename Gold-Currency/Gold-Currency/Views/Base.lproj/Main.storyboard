@@ -806,10 +806,14 @@
                                 <color key="tintColor" name="LightColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Show Rates"/>
+                                <connections>
+                                    <action selector="ShowRatesAction:" destination="BQp-JF-kDW" eventType="touchUpInside" id="1OA-ed-iul"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xFh-Ib-b8m">
                                 <rect key="frame" x="36" y="180" width="278" height="408"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" name="DarkColor"/>
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Choose Base Currency" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pXE-Od-w6L">
                                 <rect key="frame" x="36" y="60" width="278" height="40"/>
@@ -837,6 +841,12 @@
                             <constraint firstItem="pXE-Od-w6L" firstAttribute="top" secondItem="bFe-Me-Kvy" secondAttribute="bottom" constant="20" id="yZo-jE-plO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="BaseCurrencyTV" destination="pXE-Od-w6L" id="h6C-GI-efZ"/>
+                        <outlet property="CurrencyRateLabel" destination="bFe-Me-Kvy" id="eK7-oR-IlY"/>
+                        <outlet property="RatesTableViews" destination="xFh-Ib-b8m" id="cma-Wn-1fg"/>
+                        <outlet property="ShowRatesBtn" destination="COc-7R-zvB" id="ovw-UP-Z8i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5od-ue-uUS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

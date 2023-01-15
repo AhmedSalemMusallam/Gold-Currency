@@ -44,9 +44,9 @@ struct Rates : Codable{
 
 
 struct CurrencyRates : Codable{
-    let lastUpdate: Int?
+    let lastUpdate: Double?
     let base: String?
-    let rates: Rates?
+    let rates: Rates
     
 }
 
