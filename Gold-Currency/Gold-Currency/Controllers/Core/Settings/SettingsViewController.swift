@@ -54,10 +54,7 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
-    
-        
-        
+
         // Mark:- UITableView Self Delegation and DataSource
         settingTableView.delegate = self
         settingTableView.dataSource = self
@@ -82,7 +79,9 @@ extension SettingsViewController :UITableViewDelegate, UITableViewDataSource
        let cell = tableView.dequeueReusableCell(withIdentifier: "SettingTableViewCell",
                                                         for: indexPath)
         cell.textLabel?.text = SettingsTableViewData[indexPath.row]
-        cell.textLabel?.font = UIFont(name:"Helvetica Neue Bold", size:17)
+        cell.textLabel?.font = UIFont(name:"Roboto Slab Bold", size:15)
+        cell.tintColor = UIColor(named: "PrimaryColor")
+        cell.backgroundColor = UIColor(named: "DarkColor")
         
         switch indexPath.row
         {
@@ -102,6 +101,7 @@ extension SettingsViewController :UITableViewDelegate, UITableViewDataSource
             switchView.tag = indexPath.row // for detect which row switch Changed
             switchView.addTarget(self, action: #selector(openView), for: .valueChanged)
             cell.accessoryView = switchView
+            
             
         case 1:
             cell.imageView?.image = UIImage(systemName: "globe")
@@ -140,13 +140,41 @@ extension SettingsViewController :UITableViewDelegate, UITableViewDataSource
     
     //Mark:- Perform Switch operation
     @objc public func openView(sender: UISwitch){
-        if(sender.isOn) {
-            SceneDelegate.userData.set(false, forKey: "LightMode")
-            view.overrideUserInterfaceStyle = .dark
-        }else{
-            SceneDelegate.userData.set(true, forKey: "LightMode")
-            view.overrideUserInterfaceStyle = .light
-        }
+        //Mark:- show action sheet for the user to confirm dark mode option
+        let alert = UIAlertController(title: NSLocalizedString("Dark Mode Settings", comment: "action title"), message: NSLocalizedString("You have to Colse the App First ?", comment: "action message"), preferredStyle: .actionSheet)
+        
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Yes", comment: "action yes"), style: .default , handler:{ (UIAlertAction)in
+            //Mark:- Dark mode action
+            if(sender.isOn) {
+                SceneDelegate.userData.set(false, forKey: "LightMode")
+                self.view.overrideUserInterfaceStyle = .dark
+            }else{
+                SceneDelegate.userData.set(true, forKey: "LightMode")
+                self.view.overrideUserInterfaceStyle = .light
+            }
+            
+            exit(0)
+            
+        }))
+        
+        alert.addAction(UIAlertAction(title: NSLocalizedString("No", comment: "action no"), style: .destructive , handler:{ (UIAlertAction)in
+            
+            if(sender.isOn) {
+                sender.setOn(false, animated: true)
+            }else{
+                sender.setOn(true, animated: true)
+            }
+            
+            
+            print("Do no thing.")
+        }))
+        
+        
+        self.present(alert, animated: true, completion: {
+            print("completion block")
+        })
+        
+       
    }
     
 }

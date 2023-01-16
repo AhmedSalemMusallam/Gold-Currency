@@ -21,15 +21,15 @@ class OnBoardingViewController: UIViewController {
     
     // MARK: - Varaibels
     let titleArray = [
-    "Sleep Mood",
-    "Calm & Peace",
-    "Nice Place"
+    "Exchange Currency",
+    "Gold Prices",
+    "Settings"
     ]
     
     let subTitleArray = [
-    "Sleeping well is very important for every one",
-    "Clam & Pease is also very important",
-    "Nice Places are also very important",
+    "A currency exchange is a licensed business that allows customers to exchange one currency for another.",
+    "Gold Price means, with respect to any day",
+    "You can control default app language, Metal Type, and Currency",
     ]
     
     let imageArray =
@@ -64,6 +64,8 @@ extension OnBoardingViewController {
         
     }
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -77,7 +79,7 @@ extension OnBoardingViewController {
         // Do any additional setup after loading the view.
         BoardingCollectionView.delegate = self
         BoardingCollectionView.dataSource = self
-        //initializt the page number
+        //initialize the page number
         pageControl.page = 0
 
     }
@@ -89,6 +91,7 @@ extension OnBoardingViewController{
 //        print("Skip")
         showItem(at: 2)
         skipShow(true)
+        signUpButton.shake()
     }
     
      @IBAction func signUpButtonAction(_ sender: UIButton) {

@@ -137,6 +137,44 @@ class MainViewController: UIViewController {
             view.overrideUserInterfaceStyle = .dark
         }
         
+        // Mark:- seeting icons for text fields
+        metalTypeSettingTV.layer.borderWidth = 2
+        metalTypeSettingTV.layer.cornerRadius = 5
+        metalTypeSettingTV.layer.borderColor = UIColor(named: "LightColor")?.cgColor
+        currencyTypeSettingTV.layer.borderWidth = 2
+        currencyTypeSettingTV.layer.cornerRadius = 5
+        currencyTypeSettingTV.layer.borderColor = UIColor(named: "LightColor")?.cgColor
+        
+        // Mark:- Styling Labels
+        gram_24KLabel.layer.borderWidth = 2
+        gram_24KLabel.layer.cornerRadius = 2
+        gram_24KLabel.layer.borderColor = UIColor(named: "LightColor")?.cgColor
+        
+        gram_22KLabel.layer.borderWidth = 2
+        gram_22KLabel.layer.cornerRadius = 2
+        gram_22KLabel.layer.borderColor = UIColor(named: "LightColor")?.cgColor
+        
+        gram_21KLabel.layer.borderWidth = 2
+        gram_21KLabel.layer.cornerRadius = 2
+        gram_21KLabel.layer.borderColor = UIColor(named: "LightColor")?.cgColor
+        
+        gram_20KLabel.layer.borderWidth = 2
+        gram_20KLabel.layer.cornerRadius = 2
+        gram_20KLabel.layer.borderColor = UIColor(named: "LightColor")?.cgColor
+        
+        gram_18KLabel.layer.borderWidth = 2
+        gram_18KLabel.layer.cornerRadius = 2
+        gram_18KLabel.layer.borderColor = UIColor(named: "LightColor")?.cgColor
+        
+        gram_24KTitleLabel.layer.borderColor = UIColor(named: "LightColor")?.cgColor
+        gram_22KTitleLabel.layer.borderColor = UIColor(named: "LightColor")?.cgColor
+        gram_21KTitleLabel.layer.borderColor = UIColor(named: "LightColor")?.cgColor
+        gram_20KTitleLabel.layer.borderColor = UIColor(named: "LightColor")?.cgColor
+        gram_18KTitleLabel.layer.borderColor = UIColor(named: "LightColor")?.cgColor
+        
+        //Mark:- styling the button
+        showPrices.layer.cornerRadius = 5
+        
     }
     
     
@@ -155,37 +193,7 @@ class MainViewController: UIViewController {
         }else{
             view.overrideUserInterfaceStyle = .dark
         }
-        // Mark:- seeting icons for text fields
-        metalTypeSettingTV.layer.borderWidth = 2
-        metalTypeSettingTV.layer.cornerRadius = 5
-        metalTypeSettingTV.layer.borderColor = DarkColor?.cgColor
-        currencyTypeSettingTV.layer.borderWidth = 2
-        currencyTypeSettingTV.layer.cornerRadius = 5
-        currencyTypeSettingTV.layer.borderColor = DarkColor?.cgColor
         
-        // Mark:- Styling Labels
-        gram_24KLabel.layer.borderWidth = 2
-        gram_24KLabel.layer.cornerRadius = 2
-        gram_24KLabel.layer.borderColor = DarkColor?.cgColor
-        
-        gram_22KLabel.layer.borderWidth = 2
-        gram_22KLabel.layer.cornerRadius = 2
-        gram_22KLabel.layer.borderColor = DarkColor?.cgColor
-        
-        gram_21KLabel.layer.borderWidth = 2
-        gram_21KLabel.layer.cornerRadius = 2
-        gram_21KLabel.layer.borderColor = DarkColor?.cgColor
-        
-        gram_20KLabel.layer.borderWidth = 2
-        gram_20KLabel.layer.cornerRadius = 2
-        gram_20KLabel.layer.borderColor = DarkColor?.cgColor
-        
-        gram_18KLabel.layer.borderWidth = 2
-        gram_18KLabel.layer.cornerRadius = 2
-        gram_18KLabel.layer.borderColor = DarkColor?.cgColor
-        
-        //Mark:- styling the button
-        showPrices.layer.cornerRadius = 5
         
         //Mark:- Hide Prices Label
         gram_24KLabel.isHidden = true

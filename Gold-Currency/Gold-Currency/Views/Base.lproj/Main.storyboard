@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ype-4k-Pog">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Nf9-ft-DF4">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
@@ -58,7 +58,7 @@
                             </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TmB-2q-n53"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="DarkColor"/>
                         <constraints>
                             <constraint firstItem="TmB-2q-n53" firstAttribute="trailing" secondItem="NAo-cl-IwC" secondAttribute="trailing" constant="20" id="3Lp-1b-xUF"/>
                             <constraint firstItem="NAo-cl-IwC" firstAttribute="top" secondItem="Stv-Jc-EGM" secondAttribute="bottom" constant="20" id="5zo-M9-qNn"/>
@@ -102,12 +102,15 @@
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TOX-S1-C4N">
                                 <rect key="frame" x="10" y="105.66666666666669" width="370" height="632.33333333333326"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="tintColor" name="DarkColor"/>
+                                <color key="backgroundColor" name="DarkColor"/>
+                                <color key="tintColor" name="LightColor"/>
+                                <color key="separatorColor" name="LightColor"/>
+                                <color key="sectionIndexColor" name="LightColor"/>
+                                <color key="sectionIndexBackgroundColor" name="DarkColor"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ojB-vb-xWQ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="DarkColor"/>
                         <constraints>
                             <constraint firstItem="ojB-vb-xWQ" firstAttribute="bottom" secondItem="TOX-S1-C4N" secondAttribute="bottom" id="Fc8-qx-x5d"/>
                             <constraint firstItem="ojB-vb-xWQ" firstAttribute="trailing" secondItem="TOX-S1-C4N" secondAttribute="trailing" constant="10" id="Jej-S1-heM"/>
@@ -142,10 +145,10 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fg-pS-QPa">
                                 <rect key="frame" x="30.000000000000007" y="97" width="111.66666666666669" height="27"/>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="20"/>
-                                <color key="tintColor" name="DarkColor"/>
+                                <color key="tintColor" name="LightColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title=" Language" image="chevron.backward" catalog="system">
-                                    <color key="titleColor" name="DarkColor"/>
+                                    <color key="titleColor" name="LightColor"/>
                                 </state>
                                 <connections>
                                     <action selector="actionGoBack:" destination="Bvi-dg-wHv" eventType="touchUpInside" id="6tj-vf-Jmo"/>
@@ -153,27 +156,31 @@
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Select Language" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qkl-u9-SD7">
                                 <rect key="frame" x="30" y="174" width="330" height="40"/>
+                                <color key="backgroundColor" name="DarkColor"/>
+                                <color key="tintColor" name="LightColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="mfV-6Q-2iP"/>
                                 </constraints>
-                                <color key="textColor" name="DarkColor"/>
+                                <color key="textColor" name="LightColor"/>
                                 <fontDescription key="fontDescription" name="RobotoSlab-SemiBold" family="Roboto Slab" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u04-f2-SW5">
                                 <rect key="frame" x="100" y="244" width="190" height="36"/>
-                                <color key="backgroundColor" name="DarkColor"/>
+                                <color key="backgroundColor" name="LightColor"/>
                                 <fontDescription key="fontDescription" name="RobotoSlab-SemiBold" family="Roboto Slab" pointSize="18"/>
-                                <color key="tintColor" name="LightColor"/>
+                                <color key="tintColor" name="DarkColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Save Settings"/>
+                                <state key="normal" title="Save Settings">
+                                    <color key="titleColor" name="DarkColor"/>
+                                </state>
                                 <connections>
                                     <action selector="saveSettings:" destination="Bvi-dg-wHv" eventType="touchUpInside" id="y3d-db-zR6"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jKQ-2L-NZy"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="DarkColor"/>
                         <constraints>
                             <constraint firstItem="u04-f2-SW5" firstAttribute="leading" secondItem="jKQ-2L-NZy" secondAttribute="leading" constant="100" id="5z3-bt-Gfq"/>
                             <constraint firstItem="6fg-pS-QPa" firstAttribute="top" secondItem="jKQ-2L-NZy" secondAttribute="top" constant="50" id="HrY-KF-fA5"/>
@@ -215,119 +222,135 @@
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Select Metal" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jd0-KT-tdD">
                                         <rect key="frame" x="20" y="103" width="350" height="40"/>
+                                        <color key="backgroundColor" name="DarkColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="aXp-v2-Tun"/>
                                         </constraints>
+                                        <color key="textColor" name="LightColor"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-SemiBold" family="Roboto Slab" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Select Currency" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X5a-hc-Fip">
                                         <rect key="frame" x="20" y="163" width="350" height="40"/>
+                                        <color key="backgroundColor" name="DarkColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="0td-PK-73J"/>
                                         </constraints>
+                                        <color key="textColor" name="LightColor"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-SemiBold" family="Roboto Slab" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lci-RC-VfP">
-                                        <rect key="frame" x="20" y="304" width="350" height="30"/>
+                                        <rect key="frame" x="20" y="313" width="350" height="30"/>
+                                        <color key="tintColor" name="LightColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="z5f-Zi-M9M"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="RobotoSlab-SemiBold" family="Roboto Slab" pointSize="17"/>
-                                        <color key="textColor" name="DarkColor"/>
+                                        <color key="textColor" name="LightColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22K Gram Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eL1-lf-P8k">
-                                        <rect key="frame" x="20" y="354" width="350" height="30"/>
-                                        <color key="backgroundColor" name="DarkColor"/>
+                                        <rect key="frame" x="20" y="363" width="350" height="30"/>
+                                        <color key="backgroundColor" name="LightColor"/>
+                                        <color key="tintColor" name="DarkColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Ybi-sI-c3o"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="RobotoSlab-SemiBold" family="Roboto Slab" pointSize="17"/>
-                                        <color key="textColor" name="LightColor"/>
+                                        <color key="textColor" name="DarkColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20K Gram Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQf-Rn-6NU">
-                                        <rect key="frame" x="20" y="510.00000000000006" width="350" height="22.666666666666686"/>
-                                        <color key="backgroundColor" name="DarkColor"/>
+                                        <rect key="frame" x="20" y="519" width="350" height="22.666666666666629"/>
+                                        <color key="backgroundColor" name="LightColor"/>
+                                        <color key="tintColor" name="DarkColor"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-SemiBold" family="Roboto Slab" pointSize="17"/>
-                                        <color key="textColor" name="LightColor"/>
+                                        <color key="textColor" name="DarkColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDp-Aa-HA8">
-                                        <rect key="frame" x="20" y="530.66666666666663" width="350" height="30"/>
+                                        <rect key="frame" x="20" y="539.66666666666663" width="350" height="30"/>
+                                        <color key="tintColor" name="LightColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="ghX-Xv-0or"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="RobotoSlab-SemiBold" family="Roboto Slab" pointSize="17"/>
-                                        <color key="textColor" name="DarkColor"/>
+                                        <color key="textColor" name="LightColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18K Gram Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6GO-YY-7tL">
-                                        <rect key="frame" x="20" y="580.66666666666663" width="350" height="30"/>
-                                        <color key="backgroundColor" name="DarkColor"/>
+                                        <rect key="frame" x="20" y="589.66666666666663" width="350" height="30"/>
+                                        <color key="backgroundColor" name="LightColor"/>
+                                        <color key="tintColor" name="DarkColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="SCr-FV-wce"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="RobotoSlab-SemiBold" family="Roboto Slab" pointSize="17"/>
-                                        <color key="textColor" name="LightColor"/>
+                                        <color key="textColor" name="DarkColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2e-PI-a33">
-                                        <rect key="frame" x="20" y="608.66666666666663" width="350" height="30"/>
+                                        <rect key="frame" x="20" y="617.66666666666663" width="350" height="30"/>
+                                        <color key="tintColor" name="LightColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="xwp-Z7-3HS"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="RobotoSlab-SemiBold" family="Roboto Slab" pointSize="17"/>
-                                        <color key="textColor" name="DarkColor"/>
+                                        <color key="textColor" name="LightColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iYV-aH-5jS">
-                                        <rect key="frame" x="20" y="382" width="350" height="30"/>
+                                        <rect key="frame" x="20" y="391" width="350" height="30"/>
+                                        <color key="tintColor" name="LightColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="tJO-10-KGv"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="RobotoSlab-SemiBold" family="Roboto Slab" pointSize="17"/>
-                                        <color key="textColor" name="DarkColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21K Gram Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wJ-jY-vW1">
-                                        <rect key="frame" x="20" y="432" width="350" height="30"/>
-                                        <color key="backgroundColor" name="DarkColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="Xl0-gh-BaM"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="RobotoSlab-SemiBold" family="Roboto Slab" pointSize="17"/>
                                         <color key="textColor" name="LightColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0VH-u0-PRC">
-                                        <rect key="frame" x="20" y="460" width="350" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21K Gram Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wJ-jY-vW1">
+                                        <rect key="frame" x="20" y="441" width="350" height="30"/>
+                                        <color key="backgroundColor" name="LightColor"/>
+                                        <color key="tintColor" name="DarkColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="aWo-2A-aLH"/>
+                                            <constraint firstAttribute="height" constant="30" id="Xl0-gh-BaM"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="RobotoSlab-SemiBold" family="Roboto Slab" pointSize="17"/>
                                         <color key="textColor" name="DarkColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0VH-u0-PRC">
+                                        <rect key="frame" x="20" y="469" width="350" height="30"/>
+                                        <color key="tintColor" name="LightColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="aWo-2A-aLH"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="RobotoSlab-SemiBold" family="Roboto Slab" pointSize="17"/>
+                                        <color key="textColor" name="LightColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="oZW-fO-6ye">
-                                        <rect key="frame" x="65" y="304" width="260" height="260"/>
+                                        <rect key="frame" x="65" y="313" width="260" height="260"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="260" id="YQ7-rh-m8X"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Metal Type And Currency " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3F4-J5-eXl">
-                                        <rect key="frame" x="49" y="584" width="292" height="23.333333333333371"/>
+                                        <rect key="frame" x="49" y="593" width="292" height="23.333333333333371"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-SemiBold" family="Roboto Slab" pointSize="18"/>
                                         <color key="textColor" name="PrimaryColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLx-tr-dlc">
-                                        <rect key="frame" x="50" y="223" width="290" height="31"/>
-                                        <color key="backgroundColor" name="DarkColor"/>
+                                        <rect key="frame" x="50" y="223" width="290" height="40"/>
+                                        <color key="backgroundColor" name="LightColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="6oB-nM-2si"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="RobotoSlab-SemiBold" family="Roboto Slab" pointSize="14"/>
-                                        <color key="tintColor" name="LightColor"/>
+                                        <color key="tintColor" name="DarkColor"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Show Prices"/>
                                         <connections>
@@ -335,16 +358,18 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24K Gram Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRW-ah-kB1">
-                                        <rect key="frame" x="20" y="276" width="350" height="30"/>
-                                        <color key="backgroundColor" name="DarkColor"/>
+                                        <rect key="frame" x="20" y="285" width="350" height="30"/>
+                                        <color key="backgroundColor" name="LightColor"/>
+                                        <color key="tintColor" name="DarkColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="63l-3v-Xia"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="RobotoSlab-SemiBold" family="Roboto Slab" pointSize="17"/>
-                                        <color key="textColor" name="LightColor"/>
+                                        <color key="textColor" name="DarkColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <color key="backgroundColor" name="DarkColor"/>
                                 <constraints>
                                     <constraint firstItem="3F4-J5-eXl" firstAttribute="top" secondItem="oZW-fO-6ye" secondAttribute="bottom" constant="20" id="0nS-Eo-G5Z"/>
                                     <constraint firstItem="6GO-YY-7tL" firstAttribute="centerX" secondItem="3F4-J5-eXl" secondAttribute="centerX" id="1kU-SX-kWv"/>
@@ -355,7 +380,6 @@
                                     <constraint firstItem="lci-RC-VfP" firstAttribute="top" secondItem="pRW-ah-kB1" secondAttribute="bottom" constant="-2" id="9bk-eC-5lb"/>
                                     <constraint firstItem="X5a-hc-Fip" firstAttribute="leading" secondItem="pRW-ah-kB1" secondAttribute="leading" id="AG9-XF-pyD"/>
                                     <constraint firstAttribute="trailing" secondItem="Jd0-KT-tdD" secondAttribute="trailing" constant="20" id="AtL-Td-pdO"/>
-                                    <constraint firstItem="lci-RC-VfP" firstAttribute="top" secondItem="fLx-tr-dlc" secondAttribute="bottom" constant="50" id="Clp-4v-JrP"/>
                                     <constraint firstItem="fLx-tr-dlc" firstAttribute="top" secondItem="X5a-hc-Fip" secondAttribute="bottom" constant="20" id="Cm7-hq-Mup"/>
                                     <constraint firstItem="jZl-2p-DE9" firstAttribute="top" secondItem="vM4-gc-NXA" secondAttribute="top" constant="50" id="DQ1-gd-fDa"/>
                                     <constraint firstItem="Jd0-KT-tdD" firstAttribute="leading" secondItem="vM4-gc-NXA" secondAttribute="leading" constant="20" id="ELX-20-W5y"/>
@@ -442,8 +466,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="DarkColor"/>
-                        <color key="tintColor" name="DarkColor"/>
-                        <color key="barTintColor" name="DarkColor"/>
+                        <color key="tintColor" name="PrimaryColor"/>
+                        <color key="barTintColor" name="LightColor"/>
                         <color key="selectedImageTintColor" name="PrimaryColor"/>
                     </tabBar>
                     <connections>
@@ -513,24 +537,28 @@
                                     <constraint firstAttribute="height" constant="35" id="VsB-Cx-XBa"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="15"/>
-                                <color key="tintColor" name="DarkColor"/>
+                                <color key="tintColor" name="LightColor"/>
                                 <inset key="contentEdgeInsets" minX="0.0" minY="-4" maxX="0.0" maxY="0.0"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Skip"/>
+                                <state key="normal" title="Skip">
+                                    <color key="titleColor" name="LightColor"/>
+                                </state>
                                 <connections>
                                     <action selector="skipButtonAction:" destination="ozi-MI-Ndm" eventType="touchUpInside" id="MA3-MA-POb"/>
                                 </connections>
                             </button>
                             <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cI-x4-lCK">
                                 <rect key="frame" x="165" y="710" width="60" height="60"/>
-                                <color key="backgroundColor" name="DarkColor"/>
+                                <color key="backgroundColor" name="LightColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="HNl-jw-YjI"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="aLz-sA-Lpe"/>
                                 </constraints>
                                 <color key="tintColor" name="PrimaryColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="arrowshape.right.fill" catalog="system"/>
+                                <state key="normal" image="arrowshape.right.fill" catalog="system">
+                                    <color key="titleColor" name="PrimaryColor"/>
+                                </state>
                                 <connections>
                                     <action selector="signUpButtonAction:" destination="ozi-MI-Ndm" eventType="touchUpInside" id="6r2-jX-WiC"/>
                                 </connections>
@@ -562,13 +590,13 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANk-N5-VMg">
                                                     <rect key="frame" x="46" y="320" width="260" height="29.333333333333314"/>
                                                     <fontDescription key="fontDescription" name="RobotoSlab-SemiBold" family="Roboto Slab" pointSize="22"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" name="LightColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdE-qN-MbE">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdE-qN-MbE">
                                                     <rect key="frame" x="46" y="369.33333333333337" width="260" height="21.333333333333314"/>
                                                     <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="16"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" name="LightColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -583,6 +611,7 @@
                                                 <constraint firstItem="ANk-N5-VMg" firstAttribute="trailing" secondItem="N4e-uZ-eGz" secondAttribute="trailing" id="kzZ-Og-k9e"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <color key="backgroundColor" name="DarkColor"/>
                                         <size key="customSize" width="350" height="565"/>
                                         <connections>
                                             <outlet property="SleepImageView" destination="N4e-uZ-eGz" id="yf9-oj-XJe"/>
@@ -603,7 +632,7 @@
                             </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="w5v-nj-EUj"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="DarkColor"/>
                         <constraints>
                             <constraint firstItem="w5v-nj-EUj" firstAttribute="trailing" secondItem="TA3-BC-fLh" secondAttribute="trailing" constant="20" id="3iJ-jO-OZA"/>
                             <constraint firstItem="TA3-BC-fLh" firstAttribute="bottom" secondItem="KES-te-OsG" secondAttribute="bottom" id="AtO-Bc-2YT"/>
@@ -651,93 +680,104 @@
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="From Currency" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Gs-zM-EyC">
                                 <rect key="frame" x="36" y="60" width="278" height="40"/>
+                                <color key="backgroundColor" name="DarkColor"/>
+                                <color key="tintColor" name="LightColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="ueJ-Js-4tH"/>
                                 </constraints>
+                                <color key="textColor" name="LightColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="To Currency" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ult-hC-Zl3">
                                 <rect key="frame" x="36" y="120" width="278" height="40"/>
+                                <color key="backgroundColor" name="DarkColor"/>
+                                <color key="tintColor" name="LightColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="bGT-Hf-9BZ"/>
                                 </constraints>
+                                <color key="textColor" name="LightColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XjD-Nq-DOd">
                                 <rect key="frame" x="30" y="240" width="290" height="40"/>
-                                <color key="backgroundColor" name="DarkColor"/>
+                                <color key="backgroundColor" name="LightColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="NwS-sV-f8d"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <color key="tintColor" name="LightColor"/>
+                                <color key="tintColor" name="DarkColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Show Price"/>
+                                <state key="normal" title="Show Price">
+                                    <color key="titleColor" name="DarkColor"/>
+                                </state>
                                 <connections>
                                     <action selector="ShowPricesAction:" destination="U4a-K6-UK1" eventType="touchUpInside" id="3lC-GZ-LMu"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B0p-cW-aJx">
                                 <rect key="frame" x="36" y="180" width="278" height="40"/>
+                                <color key="backgroundColor" name="DarkColor"/>
+                                <color key="tintColor" name="LightColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="uTL-pc-4RZ"/>
                                 </constraints>
+                                <color key="textColor" name="LightColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Converted Amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Grw-g4-uZ5">
                                 <rect key="frame" x="30" y="300" width="290" height="40"/>
-                                <color key="backgroundColor" name="DarkColor"/>
+                                <color key="backgroundColor" name="LightColor"/>
                                 <color key="tintColor" name="LightColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="bSJ-Ay-qNa"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <color key="textColor" name="LightColor"/>
+                                <color key="textColor" name="DarkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Converted Amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDr-hz-9uu">
                                 <rect key="frame" x="30" y="340" width="290" height="40"/>
-                                <color key="backgroundColor" name="LightColor"/>
-                                <color key="tintColor" name="DarkColor"/>
+                                <color key="backgroundColor" name="DarkColor"/>
+                                <color key="tintColor" name="LightColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Ah5-IT-6jB"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="JXZ-Do-ToP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <color key="textColor" name="DarkColor"/>
+                                <color key="textColor" name="LightColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Update" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o6F-af-NB0">
                                 <rect key="frame" x="30" y="390" width="290" height="40"/>
-                                <color key="backgroundColor" name="DarkColor"/>
-                                <color key="tintColor" name="LightColor"/>
+                                <color key="backgroundColor" name="LightColor"/>
+                                <color key="tintColor" name="DarkColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Ova-aI-ixA"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="cF5-RO-8bH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <color key="textColor" name="LightColor"/>
+                                <color key="textColor" name="DarkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Update" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OaQ-KM-DA7">
                                 <rect key="frame" x="30" y="430" width="290" height="40"/>
-                                <color key="backgroundColor" name="LightColor"/>
-                                <color key="tintColor" name="DarkColor"/>
+                                <color key="backgroundColor" name="DarkColor"/>
+                                <color key="tintColor" name="LightColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Jy1-Zk-tB3"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="UlB-nu-6Xu"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="X8U-0k-p3v"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <color key="textColor" name="DarkColor"/>
+                                <color key="textColor" name="LightColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0d6-zS-7wq"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="DarkColor"/>
                         <constraints>
                             <constraint firstItem="B0p-cW-aJx" firstAttribute="leading" secondItem="OR6-O6-VhA" secondAttribute="leadingMargin" constant="20" id="07p-gh-Vj9"/>
                             <constraint firstItem="Ult-hC-Zl3" firstAttribute="leading" secondItem="OR6-O6-VhA" secondAttribute="leadingMargin" constant="20" id="1dI-k9-Kze"/>
@@ -798,34 +838,39 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="COc-7R-zvB">
                                 <rect key="frame" x="36" y="120" width="278" height="40"/>
-                                <color key="backgroundColor" name="DarkColor"/>
+                                <color key="backgroundColor" name="LightColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Nq9-Cb-zxo"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <color key="tintColor" name="LightColor"/>
+                                <color key="tintColor" name="DarkColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Show Rates"/>
+                                <state key="normal" title="Show Rates">
+                                    <color key="titleColor" name="DarkColor"/>
+                                </state>
                                 <connections>
                                     <action selector="ShowRatesAction:" destination="BQp-JF-kDW" eventType="touchUpInside" id="1OA-ed-iul"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xFh-Ib-b8m">
                                 <rect key="frame" x="36" y="180" width="278" height="408"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="DarkColor"/>
                                 <color key="tintColor" name="DarkColor"/>
+                                <color key="separatorColor" name="LightColor"/>
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Choose Base Currency" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pXE-Od-w6L">
                                 <rect key="frame" x="36" y="60" width="278" height="40"/>
+                                <color key="backgroundColor" name="DarkColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="TNB-A4-BWg"/>
                                 </constraints>
+                                <color key="textColor" name="LightColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wXt-3f-md2"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="DarkColor"/>
                         <constraints>
                             <constraint firstItem="bFe-Me-Kvy" firstAttribute="top" secondItem="Mie-0e-x30" secondAttribute="top" constant="20" id="2gc-z1-VDC"/>
                             <constraint firstItem="COc-7R-zvB" firstAttribute="top" secondItem="pXE-Od-w6L" secondAttribute="bottom" constant="20" id="6CJ-YB-wxs"/>
@@ -866,10 +911,10 @@
         <image name="image_gold_bar" width="512" height="512"/>
         <image name="settings" width="24" height="24"/>
         <namedColor name="DarkColor">
-            <color red="0.22699999809265137" green="0.20800000429153442" blue="0.20800000429153442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="LightColor">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.22745098039215686" green="0.20784313725490194" blue="0.20784313725490194" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="PrimaryColor">
             <color red="1" green="0.7369999885559082" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

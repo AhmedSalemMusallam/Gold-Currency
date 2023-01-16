@@ -32,6 +32,37 @@ class SettingDetailViewController: UIViewController {
         showSettingsActionSheet()
     }
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        //Mark:- Setting Application Mode
+        if SceneDelegate.userData.bool(forKey: "LightMode")
+        {
+            view.overrideUserInterfaceStyle = .light
+        }else{
+            view.overrideUserInterfaceStyle = .dark
+        }
+        
+        //Mark:- Setting Values from User Defaults
+        //Language Settings
+        if (SceneDelegate.userData.string(forKey: "LanguageSettings") != nil && segueIdentifier == "LanguageSettings")
+        {
+            settingSelectionUITextField.text = SceneDelegate.userData.string(forKey: "LanguageSettings")
+        }
+        //MetalSettings
+        if (SceneDelegate.userData.string(forKey: "MetalSettings") != nil && segueIdentifier == "MetalSettings")
+        {
+            settingSelectionUITextField.text = SceneDelegate.userData.string(forKey: "MetalSettings")
+        }
+        //Language Settings
+        if (SceneDelegate.userData.string(forKey: "CurrencySettings") != nil && segueIdentifier == "CurrencySettings")
+        {
+            settingSelectionUITextField.text = SceneDelegate.userData.string(forKey: "CurrencySettings")
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,7 +70,7 @@ class SettingDetailViewController: UIViewController {
         //Mark:- styling Weidgets
         settingSelectionUITextField.layer.borderWidth = 2
         settingSelectionUITextField.layer.cornerRadius = 5
-        settingSelectionUITextField.layer.borderColor = DarkColor?.cgColor
+        settingSelectionUITextField.layer.borderColor = UIColor(named: "LightColor")?.cgColor
         
         //Mark:- styling the button
         saveSetting.layer.cornerRadius = 5
@@ -64,10 +95,6 @@ class SettingDetailViewController: UIViewController {
     }
     
     //Mark:- Private Functions
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-    }
     //Mark:- Initailize UIpicker indeceis and value array
     private func initializeUIPickerLists()
     {
@@ -126,6 +153,7 @@ class SettingDetailViewController: UIViewController {
         if segueIdentifier == "LanguageSettings"
         {
             SceneDelegate.userData.set(settingSelectionUITextField.text, forKey: "LanguageSettings")
+            
         }else if segueIdentifier == "MetalSettings"
         {
             SceneDelegate.userData.set(settingSelectionUITextField.text, forKey: "MetalSettings")

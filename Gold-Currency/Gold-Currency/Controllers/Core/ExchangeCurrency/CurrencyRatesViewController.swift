@@ -73,6 +73,18 @@ class CurrencyRatesViewController: UIViewController {
     
     
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        //Mark:- Setting Application Mode
+        if SceneDelegate.userData.bool(forKey: "LightMode")
+        {
+            view.overrideUserInterfaceStyle = .light
+        }else{
+            view.overrideUserInterfaceStyle = .dark
+        }
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,7 +92,7 @@ class CurrencyRatesViewController: UIViewController {
         //Mark:- Styling TVs
         BaseCurrencyTV.layer.borderWidth = 2
         BaseCurrencyTV.layer.cornerRadius = 5
-        BaseCurrencyTV.layer.borderColor = DarkColor?.cgColor
+        BaseCurrencyTV.layer.borderColor = UIColor(named: "LightColor")?.cgColor
         
         //Mark:- styling the button
         ShowRatesBtn.layer.cornerRadius = 5
@@ -143,8 +155,8 @@ class CurrencyRatesViewController: UIViewController {
                 DispatchQueue.main.async {
                     //                    self?.ConvertedAmountValue.text = String(self?.exchangeCurrency?[0].converted ?? 0.0)
                     //                    self?.LastUpdateValue.text = self?.getDateFromTimeStamp(timeStamp: Double(self?.exchangeCurrency?[0].lastUpdate ?? 0.0))
-                    print(self?.currencyRates?[0].lastUpdate ?? 0.0)
-                    print(String(self?.currencyRates?[0].rates.EUR ?? 0.0) + "salem")
+//                    print(self?.currencyRates?[0].lastUpdate ?? 0.0)
+//                    print(String(self?.currencyRates?[0].rates.EUR ?? 0.0) + "salem")
                     
                     self?.CurrencyRatesTableData.updateValue(String(self?.currencyRates?[0].lastUpdate ?? 0.0), forKey: "lastUpdate")
                     self?.CurrencyRatesTableData.updateValue(String(self?.currencyRates?[0].base ?? "base"), forKey: "base")
@@ -208,7 +220,8 @@ extension CurrencyRatesViewController :UITableViewDelegate, UITableViewDataSourc
        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell",
                                                         for: indexPath)
         cell.textLabel?.text = "Test Text"
-        cell.textLabel?.font = UIFont(name:"Helvetica Neue Bold", size:15)
+        cell.textLabel?.font = UIFont(name:"Roboto Slab Bold", size:15)
+        cell.tintColor = UIColor(named: "PrimaryColor")
         cell.imageView?.image = UIImage(systemName: "coloncurrencysign.circle.fill")
 //        print(indexPath.row)
     

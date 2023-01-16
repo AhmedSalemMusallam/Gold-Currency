@@ -98,20 +98,32 @@ class ExchangeCurrencyViewController: UIViewController {
     var ToCurrencyPickerView = UIPickerView()
     
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        //Mark:- Setting Application Mode
+        if SceneDelegate.userData.bool(forKey: "LightMode")
+        {
+            view.overrideUserInterfaceStyle = .light
+        }else{
+            view.overrideUserInterfaceStyle = .dark
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //Mark:- Styling TVs
         FromCurrencyTV.layer.borderWidth = 2
         FromCurrencyTV.layer.cornerRadius = 5
-        FromCurrencyTV.layer.borderColor = DarkColor?.cgColor
+        FromCurrencyTV.layer.borderColor = UIColor(named: "LightColor")?.cgColor
         ToCurrencyTV.layer.borderWidth = 2
         ToCurrencyTV.layer.cornerRadius = 5
-        ToCurrencyTV.layer.borderColor = DarkColor?.cgColor
+        ToCurrencyTV.layer.borderColor = UIColor(named: "LightColor")?.cgColor
         AmountTV.layer.borderWidth = 2
         AmountTV.layer.cornerRadius = 5
-        AmountTV.layer.borderColor = DarkColor?.cgColor
-        AmountTV.attributedPlaceholder = NSAttributedString(string: "Amount", attributes: [NSAttributedString.Key.foregroundColor : UIColor.darkText])
+        AmountTV.layer.borderColor = UIColor(named: "LightColor")?.cgColor
+        AmountTV.attributedPlaceholder = NSAttributedString(string: "Amount", attributes: [NSAttributedString.Key.foregroundColor : UIColor(named: "LightColor")!])
         
         //Mark:- styling the button
         ShowPriceBtn.layer.cornerRadius = 5
